@@ -53,6 +53,9 @@
 
         [DataMember(Name = "copyrightText")]
         public string CopyrightText { get; set; }
+        
+        [DataMember(Name = "relationships")]
+        public List<Relationship> Relationships { get; set; }
 
         [DataMember(Name = "parentLayer")]
         public RelatedLayer ParentLayer { get; set; }
@@ -158,6 +161,31 @@
 
         [DataMember(Name = "typeIdField")]
         public string TypeIdField { get; set; }
+    }
+    
+    [DataContract]
+    public class Relationship
+    {
+        [DataMember(Name = "id")]
+        public int Id { get; set; }
+
+        [DataMember(Name = "name")]
+        public string Name { get; set; }
+
+        [DataMember(Name = "relatedTableId")]
+        public int RelatedTableId { get; set; }
+
+        [DataMember(Name = "cardinality")]
+        public string Cardinality { get; set; }
+
+        [DataMember(Name = "role")]
+        public string Role { get; set; }
+        
+        [DataMember(Name = "keyField")]
+        public string KeyField { get; set; }
+        
+        [DataMember(Name = "composite")]
+        public bool Composite { get; set; }
     }
 
     [DataContract]
