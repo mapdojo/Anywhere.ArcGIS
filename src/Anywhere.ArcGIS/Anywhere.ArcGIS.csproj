@@ -32,11 +32,13 @@
     <PackageReference Include="Newtonsoft.Json" />
     <PackageReference Include="System.Net.Http" />
   </ItemGroup>
-  
+
   <ItemGroup>
-    <PackageReference Include="SourceLink.Create.GitHub" PrivateAssets="All" />
-    <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.8.3" />
-    <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.8.3" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <!-- Remove these older references -->
+    <!-- <PackageReference Include="SourceLink.Create.GitHub" PrivateAssets="All" /> -->
+    <!-- <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.8.3" /> -->
+    <!-- <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.8.3" /> -->
   </ItemGroup>
 
   <ItemGroup>
